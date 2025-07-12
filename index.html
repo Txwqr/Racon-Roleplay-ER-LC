@@ -86,16 +86,21 @@
       padding: 20px 30px;
     }
     .content.active {
-      display: block;
-      background: var(--card-bg-light);
-      color: var(--text-light);
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      margin: 20px auto;
-      padding: 30px;
-      max-width: 900px;
-    }y
+  display: block;
+  background: var(--card-bg-light);
+  color: var(--text-light);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin: 20px auto;
+  padding: 30px;
+  max-width: 900px;
+  transition: background var(--transition-speed), color var(--transition-speed);
+}
+body.dark-mode .content.active {
+  background: var(--card-bg-dark);
+  color: var(--text-dark);
+}
   .styled-button {
   background: linear-gradient(to right, var(--main-color), var(--accent-color));
   color: white;
@@ -229,6 +234,5 @@
     }
   </script>
 
-</footer>
 </body>
 </html>
